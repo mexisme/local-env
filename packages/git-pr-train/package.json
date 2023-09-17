@@ -1,0 +1,10 @@
+{
+    "name": "git-pr-train-runner",
+    "version": "0.99.0",
+    "bin": {
+        "git-pr-train": "./node_modules/git-pr-train/index.js"
+    },
+    "dependencies": {
+        "git-pr-train": ">=2.5"
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "serverless-runner",
+  "version": "0.99.0",
+  "bin": {
+    "java-invoke-local": "./node_modules/java-invoke-local/lib/cli.js",
+    "serverless": "./node_modules/serverless/bin/serverless.js",
+    "sls": "./node_modules/serverless/bin/serverless.js"
+  },
+  "dependencies": {
+    "java-invoke-local": ">=0.0",
+    "serverless": ">=3.34",
+    "serverless-add-api-key": ">=4.2",
+    "serverless-offline": ">=12.0",
+    "serverless-plugin-warmup": ">=8.2",
+    "serverless-prune-plugin": ">=2.0",
+    "serverless-sam": "^0.0.5"
+  }
+}
