@@ -15,7 +15,7 @@ in buildEnv {
   paths = with pkgs; [
     aws-cloud-tools.cdk
     aws-cloud-tools.cli
-    git.pr-train
+    git.all
     node.v18
     python-with-packages
     terraform.latest
