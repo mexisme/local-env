@@ -3,7 +3,7 @@
 # - yarn2nix relies on builtins.filterSource, which is not supported by devenv.sh's lazy tree style, currently
 #   - https://discord.com/channels/1036369714731036712/1150238319473602631/1150365614913900545
 let
-  packages = pkgs.callPackage ../../packages { };
+  packages = pkgs.callPackage ../../../packages { };
   inherit (packages) buildNpmPackage;
 
 in buildNpmPackage {

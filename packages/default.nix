@@ -5,7 +5,7 @@
   buildNpmPackage = callPackage ./build-npm-package { };
 
   aws-cloud-tools = callPackage ./aws-cloud-tools { };
-  git-pr-train = callPackage ./git-pr-train { };
+  git = callPackage ./git { };
   node = callPackage ./node { };
   python-with-packages = callPackage ./python-with-packages { };
   serverless = callPackage ./serverless { };
