@@ -6,6 +6,7 @@
 
   aws-cloud-tools = callPackage ./aws-cloud-tools { };
   git = callPackage ./git { };
+  java = callPackage ./java { };
   node = callPackage ./node { };
   python-with-packages = callPackage ./python-with-packages { };
   serverless = callPackage ./serverless { };
