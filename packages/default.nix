@@ -9,6 +9,5 @@
   node = callPackage ./node { };
   python-with-packages = callPackage ./python-with-packages { };
   serverless = callPackage ./serverless { };
-  terraform-versions = callPackage ./terraform-versions { };
-  terraform-grunt = callPackage ./terraform-grunt { };
+  terraform = callPackage ./terraform { };
 }

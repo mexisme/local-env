@@ -5,7 +5,7 @@
 
 let
   packages = callPackage ./packages { };
-  inherit (packages) aws-cloud-tools git-pr-train python-with-packages serverless;
+  inherit (packages) aws-cloud-tools git-pr-train node python-with-packages serverless terraform;
 
 in buildEnv {
   # pathsToLink ignoreCollisions postBuild;
@@ -16,9 +16,10 @@ in buildEnv {
     aws-cloud-tools.cdk
     aws-cloud-tools.cli
     git-pr-train
+    node.v18
     python-with-packages
-    terraform-versions
-    terragrunt
+    terraform.latest
+    terraform.versions
     serverless
   ];
 }
