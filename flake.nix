@@ -32,9 +32,14 @@
           ];
         };
 
-        packages = with pkgs; {
-          default = callPackage ./. {};
-        } // callPackage ./packages {};
+        packages = let
+          default = pkgs.callPackage ./. { };
+          all = pkgs.callPackage ./packages { };
+          clients = pkgs.callPackage ./clients { };
+
+        in { inherit default; }
+           // all
+           // clients;
       };
     };
 }

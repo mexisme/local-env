@@ -4,6 +4,7 @@
 let
   aws-cloud-tools = callPackage ./aws-cloud-tools { };
   git = callPackage ./git { };
+  java = callPackage ./java { };
   node = callPackage ./node { };
   terraform = callPackage ./terraform { };
 
@@ -14,4 +15,4 @@ let
     serverless = callPackage ./serverless { };
   };
 
-in packages // aws-cloud-tools // git // node // terraform
+in packages // aws-cloud-tools // git // java // node // terraform

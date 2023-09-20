@@ -1,0 +1,6 @@
+{ callPackage,
+}:
+
+{
+  metservice = callPackage ./metservice { };
+}

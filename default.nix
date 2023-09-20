@@ -1,11 +1,10 @@
-{ pkgs,
-  callPackage,
+{ callPackage,
   buildEnv,
 }:
 
 let
   packages = callPackage ./packages { };
-  inherit (packages) aws-all git-all nodejs-18 python-with-packages serverless terraform-versions;
+  inherit (packages) aws-all git-all java-19 nodejs-18 python-with-packages serverless terraform-versions;
 
 in buildEnv {
   # pathsToLink ignoreCollisions postBuild;
@@ -15,6 +14,7 @@ in buildEnv {
   paths = with pkgs; [
     aws-all
     git-all
+    java-19
     nodejs-18
     python-with-packages
     terraform-versions
