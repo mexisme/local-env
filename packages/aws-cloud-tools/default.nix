@@ -1,6 +1,16 @@
-{ callPackage, ... }:
+{ callPackage,
+  buildEnv,
+}:
 
-{
-  cli = callPackage ./cli { };
-  cdk = callPackage ./cdk { };
-}
+let
+  packages = {
+    aws-cli = callPackage ./cli { };
+    aws-cdk = callPackage ./cdk { };
+  };
+
+  aws-all = buildEnv {
+    name = "aws-all";
+    paths = builtins.attrValues packages;
+  };
+
+in { inherit aws-all; } // packages

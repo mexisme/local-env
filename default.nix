@@ -5,7 +5,7 @@
 
 let
   packages = callPackage ./packages { };
-  inherit (packages) aws-cloud-tools git node python-with-packages serverless terraform;
+  inherit (packages) aws-all git-all nodejs-18 python-with-packages serverless terraform-versions;
 
 in buildEnv {
   # pathsToLink ignoreCollisions postBuild;
@@ -13,13 +13,11 @@ in buildEnv {
 
   name = "all-packages";
   paths = with pkgs; [
-    aws-cloud-tools.cdk
-    aws-cloud-tools.cli
-    git.all
-    node.v18
+    aws-all
+    git-all
+    nodejs-18
     python-with-packages
-    terraform.latest
-    terraform.versions
+    terraform-versions
     serverless
   ];
 }

@@ -48,8 +48,9 @@ let
       git-hub;
   };
 
-  all = buildEnv {
-    name = "all-git-tools";
+  git-all = buildEnv {
+    name = "git-all";
     paths = builtins.attrValues packages;
   };
-in  { all = all; } // packages
+
+in  { inherit git-all; } // packages
