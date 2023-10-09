@@ -13,6 +13,7 @@ let
 
     python-with-packages = callPackage ./python-with-packages { };
     serverless = callPackage ./serverless { };
+    nestjs = callPackage ./nestjs { };
   };
 
 in packages // aws-cloud-tools // git // java // node // terraform

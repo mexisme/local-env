@@ -1,0 +1,10 @@
+{
+  "name": "nestjs-runner",
+  "version": "0.99.0",
+  "bin": {
+    "nest": "./node_modules/@nestjs/cli/bin/nest.js"
+  },
+  "dependencies": {
+    "@nestjs/cli": "^10.1.18"
+  }
+}
