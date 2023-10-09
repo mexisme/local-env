@@ -5,7 +5,7 @@
 
 let
   packages = callPackage ../../packages { };
-  inherit (packages) aws-all git-all;
+  inherit (packages) aws-all git-all nestjs;
 
 in buildEnv {
   # pathsToLink ignoreCollisions postBuild;
@@ -17,5 +17,6 @@ in buildEnv {
     # pkgs.zsh
     aws-all
     git-all
+    nestjs
   ];
 }
