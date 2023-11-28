@@ -15,7 +15,7 @@ in buildNpmPackage {
   # If the "package-lock.json" needs updating, NPM Deps Hash can be calculated by running the following in this dir:
   #   nix run 'nixpkgs#prefetch-npm-deps' -- ./package-lock.json
   # ... and replacing the below SHA hash with the value output:
-  npmDepsHash = "sha256-8YrEtVhYXHO79XU0DhtVXiwpgnunl7x4KkQY9LVrAIg=";
+  npmDepsHash = "sha256-Hl8xOkYArSSXTDk6wF0fNUm2aRwsqw4Ox7KK0Er5fyY=";
 
   dontNpmBuild = true;
   npmInstallFlags = [ "--bin-links" ];
