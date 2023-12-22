@@ -4,8 +4,8 @@
 }:
 
 let
-  node = callPackage ../../packages/node { };
+  javascript = callPackage ../../packages/javascript { };
 
 in
 # We're overriding this, to fully control the version of Node being used:
-buildNpmPackage.override { nodejs = node.nodejs-18; }
+buildNpmPackage.override { nodejs = javascript.nodejs-18; }

@@ -5,7 +5,7 @@ let
   aws-cloud-tools = callPackage ./aws-cloud-tools { };
   git = callPackage ./git { };
   java = callPackage ./java { };
-  node = callPackage ./node { };
+  javascript = callPackage ./javascript { };
   terraform = callPackage ./terraform { };
 
   packages = {
@@ -16,4 +16,4 @@ let
     nestjs = callPackage ./nestjs { };
   };
 
-in packages // aws-cloud-tools // git // java // node // terraform
+in packages // aws-cloud-tools // git // java // javascript // terraform
