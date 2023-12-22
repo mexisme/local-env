@@ -5,7 +5,7 @@
 
 let
   packages = callPackage ../../packages { };
-  inherit (packages) aws-all git-all nestjs with-jdk-19;
+  inherit (packages) aws-all git-all nestjs swc with-jdk-19;
 
 in buildEnv {
   # pathsToLink ignoreCollisions postBuild;
@@ -18,6 +18,7 @@ in buildEnv {
     aws-all
     git-all
     nestjs
+    swc
     with-jdk-19
   ];
 }
