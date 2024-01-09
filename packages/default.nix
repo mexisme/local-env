@@ -1,4 +1,7 @@
-{ callPackage, ... }:
+{ pkgs,
+  callPackage,
+  ...
+}:
 
 # Import the local packages, and export them via a new attrset:
 let
@@ -9,6 +12,10 @@ let
   terraform = callPackage ./terraform { };
 
   packages = {
+    # These are .so-resolvers for Nix, that will allow binaries depending on the FHS to run with .so binaries stored in the Nix store:
+    # envfs   # This runs as a FUSE module, so not likely to be as-useful
+    inherit (pkgs) nix-ld;
+
     buildNpmPackage = callPackage ./build-npm-package { };
 
     python-with-packages = callPackage ./python-with-packages { };
