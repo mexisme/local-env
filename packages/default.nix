@@ -6,16 +6,13 @@
 # Import the local packages, and export them via a new attrset:
 let
   aws-cloud-tools = callPackage ./aws-cloud-tools { };
+  dev-tools = callPackage ./dev-tools { };
   git = callPackage ./git { };
   java = callPackage ./java { };
   javascript = callPackage ./javascript { };
   terraform = callPackage ./terraform { };
 
   packages = {
-    # These are .so-resolvers for Nix, that will allow binaries depending on the FHS to run with .so binaries stored in the Nix store:
-    # envfs   # This runs as a FUSE module, so not likely to be as-useful
-    inherit (pkgs) nix-ld;
-
     buildNpmPackage = callPackage ./build-npm-package { };
 
     python-with-packages = callPackage ./python-with-packages { };
@@ -23,4 +20,4 @@ let
     nestjs = callPackage ./nestjs { };
   };
 
-in packages // aws-cloud-tools // git // java // javascript // terraform
+in packages // aws-cloud-tools // dev-tools // git // java // javascript // terraform
